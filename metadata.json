@@ -1,0 +1,6 @@
+{
+  "name": "DisasterMind AI Command Center",
+  "description": "An intelligent disaster prediction, protection, and response command center providing real-time situation mapping, tactical resource coordination, and predictive hazard warnings.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

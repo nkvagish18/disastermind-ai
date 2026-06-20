@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --color-val-slate-950: #050811;
+  --color-val-slate-900: #0f172a;
+  --color-val-slate-850: #1e293b;
+  --color-val-slate-805: #0d1527;
+  --color-val-slate-800: #1e293b;
+  --color-val-slate-700: #334155;
+  --color-val-slate-650: #50617a;
+  --color-val-slate-550: #6b7d96;
+  --color-val-slate-500: #64748b;
+  --color-val-slate-400: #94a3b8;
+  --color-val-slate-350: #cbd5e1;
+  --color-val-slate-300: #cbd5e1;
+  --color-val-slate-100: #f1f5f9;
+  --color-val-slate-50: #f8fafc;
+  
+  --grid-color: rgba(0, 229, 255, 0.04);
+}
+
+.light-theme {
+  --color-val-slate-950: #f8fafc;
+  --color-val-slate-900: #ffffff;
+  --color-val-slate-850: #f1f5f9;
+  --color-val-slate-805: #f1f5f9;
+  --color-val-slate-800: #e2e8f0;
+  --color-val-slate-700: #cbd5e1;
+  --color-val-slate-650: #334155;
+  --color-val-slate-550: #475569;
+  --color-val-slate-500: #64748b;
+  --color-val-slate-400: #1e293b;
+  --color-val-slate-350: #0f172a;
+  --color-val-slate-300: #0f172a;
+  --color-val-slate-100: #0f172a;
+  --color-val-slate-50: #050811;
+
+  --grid-color: rgba(0, 50, 200, 0.03);
+}
+
+@theme {
+  --animate-scan-y: scan-y 8s linear infinite;
+  --animate-spin-slow: spin-slow 22s linear infinite;
+  --animate-radar-spin: radar-spin 12s linear infinite;
+
+  --color-red-650: #d91b36;
+  --color-red-955: #380208;
+  --color-cyan-955: #022030;
+
+  --color-slate-950: var(--color-val-slate-950);
+  --color-slate-900: var(--color-val-slate-900);
+  --color-slate-850: var(--color-val-slate-850);
+  --color-slate-805: var(--color-val-slate-805);
+  --color-slate-800: var(--color-val-slate-800);
+  --color-slate-700: var(--color-val-slate-700);
+  --color-slate-650: var(--color-val-slate-650);
+  --color-slate-550: var(--color-val-slate-550);
+  --color-slate-500: var(--color-val-slate-500);
+  --color-slate-400: var(--color-val-slate-400);
+  --color-slate-350: var(--color-val-slate-350);
+  --color-slate-300: var(--color-val-slate-300);
+  --color-slate-100: var(--color-val-slate-100);
+  --color-slate-50: var(--color-val-slate-50);
+
+  @keyframes scan-y {
+    0% { transform: translateY(0); opacity: 0.2; }
+    50% { transform: translateY(90vh); opacity: 0.8; }
+    100% { transform: translateY(0); opacity: 0.2; }
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes radar-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+}
+
+/* Custom procedural high-tech background grid mesh patterning */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+}
+
+.leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+body {
+  background-color: var(--color-val-slate-950);
+  color: var(--color-val-slate-400);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
